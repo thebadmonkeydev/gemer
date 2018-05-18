@@ -1,4 +1,4 @@
-# Gemly
+# Gemer
 
 A lightweight gem designed to provide tools for Ruby modules and gems
 
@@ -7,7 +7,7 @@ A lightweight gem designed to provide tools for Ruby modules and gems
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'gemly'
+gem 'gemer'
 ```
 
 And then execute:
@@ -16,17 +16,17 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install gemly
+    $ gem install gemer
 
 ## Usage
 
 ### Configuration
 
-Any module can be made configurable with Gemly with simple module extension:
+Any module can be made configurable with gemer with simple module extension:
 
 ```ruby
 module MyModule
-  include Gemly::Configurable
+  include Gemer::Configurable
 
   # Default configuration values
   configure_defaults do |c|
@@ -61,7 +61,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/thebadmonkeydev/gemly. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/thebadmonkeydev/gemer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -69,4 +69,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Gemly project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thebadmonkeydev/gemly/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the gemer project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thebadmonkeydev/gemer/blob/master/CODE_OF_CONDUCT.md).

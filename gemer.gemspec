@@ -3,7 +3,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gemer/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'Gemer'
+  spec.name          = 'gemer'
   spec.version       = Gemer::VERSION
   spec.authors       = ['Michael Kelly']
   spec.email         = ['michaelkelly322@gmail.com']
