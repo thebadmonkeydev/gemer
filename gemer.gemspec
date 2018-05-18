@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = 'Provides useful Ruby library/module tools'
   spec.description   = 'Provides useful Ruby library/module tools'
-  spec.homepage      = ''
+  spec.homepage      = 'https://github.com/thebadmonkeydev/gemer'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
