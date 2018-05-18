@@ -43,10 +43,21 @@ module Gemer
       @target.class_eval <<-DEF, __FILE__, __LINE__ + 1
           class << self
             def #{name}
-              @#{name} ||= #{value.nil? ? 'nil' : value}
+              @#{name} ||= #{interpolated_value(value)}
             end
           end
       DEF
+    end
+
+    def interpolated_value(value)
+      case value.class.name
+      when 'NilClass'
+        'nil'
+      when 'String'
+        "'#{value}'"
+      else
+        value
+      end
     end
 
     def define_reader(name)

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    Gemer (0.1.0)
+    gemer (0.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -31,8 +31,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  Gemer!
   bundler (~> 1.16)
+  gemer!
   pry
   rake (~> 10.0)
   rspec (~> 3.0)
