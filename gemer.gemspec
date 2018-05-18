@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Michael Kelly']
   spec.email         = ['michaelkelly322@gmail.com']
 
-  spec.summary       = 'Provides useful Ruby library/module tools'
-  spec.description   = 'Provides useful Ruby library/module tools'
+  spec.summary       = 'Provides useful Ruby library/module configuration tools'
+  spec.description   = 'Provides useful Ruby library/module configuration tools'
   spec.homepage      = 'https://github.com/thebadmonkeydev/gemer'
   spec.license       = 'MIT'
 
