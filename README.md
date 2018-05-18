@@ -1,8 +1,6 @@
 # Gemly
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/gemly`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+A lightweight gem designed to provide tools for Ruby modules and gems
 
 ## Installation
 
@@ -22,7 +20,38 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### Configuration
+
+Any module can be made configurable with Gemly with simple module extension:
+
+```ruby
+module MyModule
+  include Gemly::Configurable
+
+  # Default configuration values
+  configure_defaults do |c|
+    c.attr :force, false       # creates new configurable attribute with a default value
+    c.attr :namespace          # creates a configurable attribute that is nil
+
+    c.attr :engine, :rails, in: [:rails, :sinatra] # restrict the possible values for an attribute
+
+    c.read_only :secret, 'foo' # creates a readonly attribute
+  end
+end
+```
+
+This will will make `MyModule` configurable:
+
+```ruby
+MyModule.configure do |c|
+  c.force = true
+  c.namespace = 'MYAPP'
+  c.engine = :sinatra
+
+  # c.engine = :foo   <= raises an error (not in possible values)
+  # c.secret = 'bar'  <= raises an error (can't modify read-only attribute)
+end
+```
 
 ## Development
 
@@ -32,7 +61,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/gemly. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/thebadmonkeydev/gemly. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
@@ -40,4 +69,4 @@ The gem is available as open source under the terms of the [MIT License](https:/
 
 ## Code of Conduct
 
-Everyone interacting in the Gemly project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/gemly/blob/master/CODE_OF_CONDUCT.md).
+Everyone interacting in the Gemly project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/thebadmonkeydev/gemly/blob/master/CODE_OF_CONDUCT.md).
