@@ -19,10 +19,11 @@ Gem::Specification.new do |s|
   s.bindir        = 'exe'
   s.executables   = s.files.grep(%r{^exe/}) { |f| File.basename(f) }
   s.require_paths = ['lib']
-  s.required_ruby_version = '~> 1.9'
+  s.required_ruby_version = '~> 2.2'
 
   s.add_development_dependency 'bundler', '~> 1.16'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'rake',    '~> 10.0'
   s.add_development_dependency 'rspec',   '~> 3.0'
+  s.add_development_dependency 'simplecov'
 end

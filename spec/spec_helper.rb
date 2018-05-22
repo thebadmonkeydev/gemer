@@ -1,5 +1,10 @@
-require "bundler/setup"
-require "gemly"
+require 'bundler/setup'
+require 'pry'
+
+require 'simplecov'
+SimpleCov.start
+
+require 'gemer'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
