@@ -1,4 +1,4 @@
-# Gemer
+# Gemer [![Build Status](https://travis-ci.org/thebadmonkeydev/gemer.svg?branch=master)](https://travis-ci.org/thebadmonkeydev/gemer) [![Test Coverage](https://api.codeclimate.com/v1/badges/08c65482f9f0d9e80928/test_coverage)](https://codeclimate.com/github/thebadmonkeydev/gemer/test_coverage) [![Maintainability](https://api.codeclimate.com/v1/badges/08c65482f9f0d9e80928/maintainability)](https://codeclimate.com/github/thebadmonkeydev/gemer/maintainability)
 
 A lightweight gem designed to provide tools for Ruby modules and gems
 
