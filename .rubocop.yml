@@ -1,0 +1,4 @@
+AllCops:
+  TargetRubyVersion: '1.9'
+  Exclude:
+    - 'spec/**/*'

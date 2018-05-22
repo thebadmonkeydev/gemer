@@ -2,26 +2,27 @@ lib = File.expand_path('lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'gemer/version'
 
-Gem::Specification.new do |spec|
-  spec.name          = 'gemer'
-  spec.version       = Gemer::VERSION
-  spec.authors       = ['Michael Kelly']
-  spec.email         = ['michaelkelly322@gmail.com']
+Gem::Specification.new do |s|
+  s.name          = 'gemer'
+  s.version       = Gemer::VERSION
+  s.authors       = ['Michael Kelly']
+  s.email         = ['michaelkelly322@gmail.com']
 
-  spec.summary       = 'Provides useful Ruby library/module configuration tools'
-  spec.description   = 'Provides useful Ruby library/module configuration tools'
-  spec.homepage      = 'https://github.com/thebadmonkeydev/gemer'
-  spec.license       = 'MIT'
+  s.summary       = 'Provides useful Ruby library/module configuration tools'
+  s.description   = 'Provides useful Ruby library/module configuration tools'
+  s.homepage      = 'https://github.com/thebadmonkeydev/gemer'
+  s.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0").reject do |f|
+  s.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
   end
-  spec.bindir        = 'exe'
-  spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.require_paths = ['lib']
+  s.bindir        = 'exe'
+  s.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
+  s.require_paths = ['lib']
+  s.required_ruby_version = '~> 1.9'
 
-  spec.add_development_dependency 'bundler', '~> 1.16'
-  spec.add_development_dependency 'pry'
-  spec.add_development_dependency 'rake',    '~> 10.0'
-  spec.add_development_dependency 'rspec',   '~> 3.0'
+  s.add_development_dependency 'bundler', '~> 1.16'
+  s.add_development_dependency 'pry'
+  s.add_development_dependency 'rake',    '~> 10.0'
+  s.add_development_dependency 'rspec',   '~> 3.0'
 end
