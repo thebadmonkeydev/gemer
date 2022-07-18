@@ -1,10 +1,10 @@
-/.bundle/
+/.bundle/gamertrader
 /.yardoc
 /_yardoc/
 /coverage/
 /doc/
 /pkg/
-/spec/reports/
+/spec/reports/gamertrader/2000000000
 /tmp/
 
 # rspec failure tracking
